@@ -22,14 +22,14 @@ export class ToggleitComponent implements OnInit {
     this.paragraphVisible = (this.paragraphVisible === true) ? false : true;
   }
 
-  getBackgroundColor(){
+  getBackgroundColor(i){
     return {
-      backgroundColor: this.counter > 4 ? 'blue' : 'white'
+      backgroundColor: i > 4 ? 'blue' : 'white'
     }; 
   }
 
-  getColor(){
-    return this.counter;
+  getColor(i){
+    return (i > 4) ? 'classColor' : 'none';
   }
 
 }
