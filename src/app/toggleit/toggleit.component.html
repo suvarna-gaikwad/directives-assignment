@@ -1,4 +1,7 @@
 <button (click)="toggleParagraph()">Display Details</button>
 <p *ngIf="paragraphVisible">This is paragraph</p>
 <hr>
-<p *ngFor="let log of logArray; let i = index" [ngStyle]="getBackgroundColor(i)" [ngClass]="getColor(i)">{{ log }}</p>
+<!--p *ngFor="let log of logArray; let i = index" [ngStyle]="getBackgroundColor(i)" [ngClass]="getColor(i)">{{ log }}</p-->
+<p *ngFor="let log of logArray; let i = index" 
+  [ngStyle]="{'background-color': i>=4 ? 'red' : 'white'}" 
+  [ngClass]="{'classColor': i>=4}">{{ log }}</p>
